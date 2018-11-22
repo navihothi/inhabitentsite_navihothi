@@ -36,22 +36,22 @@ function create_post_labels($label) {
             'labels' => create_post_labels("Adventure"),
             'has_archive' => true,
             'public' => true,
-            'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+            'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes', 'author' ),
             'taxonomies' => array( 'post_tag', 'category' ),	
             'exclude_from_search' => false,
             'capability_type' => 'post',
-            'rewrite' => array( 'slug' => 'products' ),
+            'rewrite' => array( 'slug' => 'adventures' ),
             )
         );
         register_post_type( 'Journal', array(
             'labels' => create_post_labels("Journal"),
             'has_archive' => true,
             'public' => true,
-            'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+            'supports' => array( 'title','author', 'comments', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
             'taxonomies' => array( 'post_tag', 'category' ),	
             'exclude_from_search' => false,
             'capability_type' => 'post',
-            'rewrite' => array( 'slug' => 'products' ),
+            'rewrite' => array( 'slug' => 'journals' ),
             )
         );
         register_post_type( 'Product', array(
@@ -68,4 +68,5 @@ function create_post_labels($label) {
 }
 
     add_action( 'init', 'create_post_type');
+
 ?>

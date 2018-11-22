@@ -20,7 +20,8 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
-
+				<?php $searchlink = get_permalink($searchlink->ID); ?>
+				<a class = "search-read-more" href = "<?php echo $searchlink ?>">Read More</a> 
 			<?php endwhile; ?>
 
 			<?php red_starter_numbered_pagination(); ?>

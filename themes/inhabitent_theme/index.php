@@ -6,7 +6,7 @@
  */
 
 get_header(); ?> 
-
+	<link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
